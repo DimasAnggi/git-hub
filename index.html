@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimas-PPLG-RPL2</title>
+    <title>ganti warna latar belakang</title>
+    <style>
+    body {
+        font-family: Arial-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    button {
+        padding: auto;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    </style>
 </head>
 <body>
-    
+    <h1>klik tombol untuk mengganti warna latar</h1>
+
+    <button id="colorButton">Ganti Warna</button>
+
+    <script>
+        document.querySelector('#colorButton').addEventListener('click', function() {
+            const colors = ['#FF5733','#33FF57','#3357FF','#F333FF'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.querySelector('body').style.backgroundColor = randomColor;
+        });
+    </script>
 </body>
 </html>
